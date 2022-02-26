@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+
+      <!-- Dev Stylesheets -->
+      <link rel="stylesheet" href="style.css" />
+      <script src="./app.js" defer></script>
+      <title>Splittler Layout</title>
+   </head>
+   <body>
+      <div class="splitter">
+         <div class="splitter-title">
+            <h1 class="splitter-title__main">
+               Spli <span class="splitter-title__sub">tter</span>
+            </h1>
+         </div>
+         <div class="app">
+            <form class="options" id="options">
+               <div class="bill">
+                  <label for="bill-input" class="label">Bill</label>
+                  <img class="icon" src="./img/icon-dollar.svg" alt="" />
+                  <input class="bill__input input" type="number" id="bill-input" required />
+               </div>
+
+               <div class="tip">
+                  <label class="tip__label label">Select Tip %</label>
+                  <div class="tip__button-box">
+                     <button
+                        type="button"
+                        value="5"
+                        class="tip__button tip__button--hover tip__button--active"
+                     >
+                        5%
+                     </button>
+                     <button type="button" value="10" class="tip__button tip__button--hover">
+                        10%
+                     </button>
+                     <button type="button" value="15" class="tip__button tip__button--hover">
+                        15%
+                     </button>
+                     <button type="button" value="25" class="tip__button tip__button--hover">
+                        25%
+                     </button>
+                     <button type="button" value="50" class="tip__button tip__button--hover">
+                        50%
+                     </button>
+                     <input
+                        type="number"
+                        id="tip-input"
+                        class="tip__button tip__button--custom"
+                        placeholder="Custom"
+                     />
+                  </div>
+               </div>
+
+               <div class="people">
+                  <label for="people-input" class="label">Number of People</label>
+                  <img class="icon" src="./img/icon-person.svg" alt="" />
+
+                  <input
+                     class="people__input input"
+                     type="number"
+                     name="people"
+                     id="people-input"
+                     required
+                  />
+               </div>
+            </form>
+
+            <div class="results">
+               <div class="summaries">
+                  <div class="summary">
+                     <div class="summary__text-box">
+                        <p class="summary__text">Tip Amount</p>
+                        <p class="summary__per">/ Person</p>
+                     </div>
+                     <p class="summary__display" id="tipDisplay">&dollar;0</p>
+                  </div>
+
+                  <div class="summary">
+                     <div class="summary__text-box">
+                        <p class="summary__text">Total</p>
+                        <p class="summary__per">/ Person</p>
+                     </div>
+                     <p class="summary__display" id="totalDisplay">&dollar;0</p>
+                  </div>
+               </div>
+
+               <button class="results__button" id="button-calculate">Calculate</button>
+               <button class="results__button" id="button-reset">Reset</button>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
